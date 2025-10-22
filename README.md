@@ -1,48 +1,43 @@
-# 🧩 Docker-Templates – Unraid
+# 🧩 Docker-Templates – Unraid (manuelle Installation)
 
-Vorlagen-Repository für **Unraid DockerMan**.  
-Enthält derzeit:
+Vorlagen-Repository für **Unraid DockerMan**.
 
-- 🗄️ **TeamSpeak3-MariaDB** → [Docker Hub](https://hub.docker.com/r/blackbandit1804/teamspeak-mariadb)  
-- 📦 Weitere Templates folgen …
+> **Hinweis:** In Unraid 7.x gibt es die frühere UI-Option „Template Repositories“ nicht mehr (deprecation).  
+> Verwende stattdessen **Benutzer‑Vorlagen**: Lege die XML direkt unter `/boot/config/plugins/dockerMan/templates-user/` ab.
 
 ---
 
 ## 🇩🇪 Deutsch
 
-### 💡 Verwendung in Unraid
-
-1. **Unraid Web-UI → Docker → Template-Repositories**  
-2. Klicke **„Add New“**  
-3. Trage ein:
-   ```
-   https://github.com/Blackbandit1804/docker-templates
-   ```
-4. Danach: **„TeamSpeak3-MariaDB“** erscheint beim Hinzufügen eines Containers.
+### 🧩 Installation (ohne Community Apps)
+Füge die TeamSpeak‑Vorlage lokal hinzu:
+```bash
+mkdir -p /boot/config/plugins/dockerMan/templates-user
+curl -fsSL "https://raw.githubusercontent.com/Blackbandit1804/docker-templates/main/TeamSpeak3-MariaDB.xml"   -o /boot/config/plugins/dockerMan/templates-user/TeamSpeak3-MariaDB.xml
+```
+Danach in der WebUI: **Docker → Container hinzufügen → Vorlage auswählen → „TeamSpeak3-MariaDB“**.
 
 ### 🔗 Nützliche Links
-- 🐳 [Docker Hub – blackbandit1804/teamspeak-mariadb](https://hub.docker.com/r/blackbandit1804/teamspeak-mariadb)  
-- 💾 [GitHub – ts3-mariadb (Build-Repo)](https://github.com/Blackbandit1804/ts3-mariadb)  
-- 🧱 [Basis-Projekt – ich777/docker-teamspeak](https://github.com/ich777/docker-teamspeak)
+- 🐳 **Docker Hub:** <https://hub.docker.com/r/blackbandit1804/teamspeak-mariadb>
+- 💾 **GitHub (Build-Repo):** <https://github.com/Blackbandit1804/ts3-mariadb>
+- 🧱 **Basis-Projekt:** <https://github.com/ich777/docker-teamspeak>
 
 ---
 
 ## 🇬🇧 English
 
-### 💡 Use in Unraid
-
-1. **Unraid Web UI → Docker → Template Repositories**  
-2. Click **“Add New”**  
-3. Enter:
-   ```
-   https://github.com/Blackbandit1804/docker-templates
-   ```
-4. Afterwards, the **TeamSpeak3-MariaDB** template will appear under “Add Container”.
+### 🧩 Installation (without Community Apps)
+Add the TeamSpeak template locally:
+```bash
+mkdir -p /boot/config/plugins/dockerMan/templates-user
+curl -fsSL "https://raw.githubusercontent.com/Blackbandit1804/docker-templates/main/TeamSpeak3-MariaDB.xml"   -o /boot/config/plugins/dockerMan/templates-user/TeamSpeak3-MariaDB.xml
+```
+Then in the web UI: **Docker → Add Container → Select template → “TeamSpeak3-MariaDB”**.
 
 ### 🔗 Useful Links
-- 🐳 [Docker Hub – blackbandit1804/teamspeak-mariadb](https://hub.docker.com/r/blackbandit1804/teamspeak-mariadb)  
-- 💾 [GitHub – ts3-mariadb (Build Repo)](https://github.com/Blackbandit1804/ts3-mariadb)  
-- 🧱 [Base Project – ich777/docker-teamspeak](https://github.com/ich777/docker-teamspeak)
+- 🐳 **Docker Hub:** <https://hub.docker.com/r/blackbandit1804/teamspeak-mariadb>
+- 💾 **GitHub (build repo):** <https://github.com/Blackbandit1804/ts3-mariadb>
+- 🧱 **Base project:** <https://github.com/ich777/docker-teamspeak>
 
 ---
 
