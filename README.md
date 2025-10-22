@@ -1,8 +1,10 @@
 # 🧩 Docker-Templates – Unraid (manuelle Installation)
 
-![Docker Pulls](https://img.shields.io/docker/pulls/blackbandit1804/teamspeak-mariadb?style=for-the-badge&logo=docker)
-![Image Size](https://img.shields.io/docker/image-size/blackbandit1804/teamspeak-mariadb/latest?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Blackbandit1804/docker-templates?style=for-the-badge&logo=github)
+![GitHub repo size](https://img.shields.io/github/repo-size/Blackbandit1804/docker-templates?style=for-the-badge)
+![License](https://img.shields.io/github/license/Blackbandit1804/docker-templates?style=for-the-badge)
+![Platform](https://img.shields.io/badge/platform-Unraid-orange?style=for-the-badge&logo=unraid)
+![Maintainer](https://img.shields.io/badge/maintainer-Blackbandit1804-blue?style=for-the-badge&logo=github)
 
 Vorlagen-Repository für **Unraid DockerMan**.
 
