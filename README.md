@@ -1,5 +1,9 @@
 # 🧩 Docker-Templates – Unraid (manuelle Installation)
 
+![Docker Pulls](https://img.shields.io/docker/pulls/blackbandit1804/teamspeak-mariadb?style=for-the-badge&logo=docker)
+![Image Size](https://img.shields.io/docker/image-size/blackbandit1804/teamspeak-mariadb/latest?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/Blackbandit1804/docker-templates?style=for-the-badge&logo=github)
+
 Vorlagen-Repository für **Unraid DockerMan**.
 
 > **Hinweis:** In Unraid 7.x gibt es die frühere UI-Option „Template Repositories“ nicht mehr (deprecation).  
