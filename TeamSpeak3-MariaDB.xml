@@ -15,9 +15,9 @@
   <Category>Network:Voip</Category>
 
   <WebUI/>
-  <!-- deine eigene RAW-URL -->
+  <!-- eigene RAW-URL zum Template -->
   <TemplateURL>https://raw.githubusercontent.com/Blackbandit1804/docker-templates/main/TeamSpeak3-MariaDB.xml</TemplateURL>
-  <!-- dein eigenes Icon -->
+  <!-- eigenes Icon -->
   <Icon>https://github.com/Blackbandit1804/docker-templates/raw/main/images/teamspeak3.png</Icon>
 
   <ExtraParams>--restart unless-stopped</ExtraParams>
@@ -48,9 +48,11 @@
   <Config Name="License agreement" Target="TS3SERVER_LICENSE" Default="accept" Mode=""
           Description="Setze auf 'accept' (oder 'view')." Type="Variable"
           Display="always" Required="true" Mask="false">accept</Config>
+
   <Config Name="Enable TSDNS" Target="ENABLE_TSDNS" Default="" Mode=""
           Description="Optional. Wenn aktiv, TCP 41144 zusätzlich mappen."
           Type="Variable" Display="always" Required="false" Mask="false"/>
+
   <Config Name="EXTRA_START_PARAMS" Target="EXTRA_START_PARAMS"
           Default="inifile=/teamspeak/ts3server.ini" Mode=""
           Description="ts3server Start-Parameter (empfohlen: nur INI referenzieren)."
@@ -60,16 +62,29 @@
   <Config Name="LD_LIBRARY_PATH" Target="LD_LIBRARY_PATH" Default=""
           Mode="" Description="Nur setzen, falls unbedingt nötig (ich777 setzt libs automatisch)."
           Type="Variable" Display="advanced" Required="false" Mask="false">/teamspeak:/teamspeak/redist</Config>
+
   <Config Name="UMASK" Target="UMASK" Default="000" Mode=""
           Description="Nur ändern, wenn du weißt, was du tust."
           Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+
   <Config Name="UID" Target="UID" Default="99" Mode=""
           Description="Unraid 'nobody'."
           Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+
   <Config Name="GID" Target="GID" Default="100" Mode=""
           Description="Unraid 'users'."
           Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+
   <Config Name="DATA_PERM" Target="DATA_PERM" Default="770" Mode=""
           Description="chmod auf Data Path."
           Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+
+  <!-- 🔧 Neu: Version & URL (smart update im entrypoint) -->
+  <Config Name="TS_VER" Target="TS_VER" Default="3.13.7" Mode=""
+          Description="TeamSpeak Server Version (z. B. 3.13.8). Wird beim Start mit .ts_version abgeglichen und bei Änderung automatisch neu geladen."
+          Type="Variable" Display="advanced" Required="false" Mask="false">3.13.7</Config>
+
+  <Config Name="TS_URL" Target="TS_URL" Default="" Mode=""
+          Description="Optional: vollständige Download-URL. Überschreibt TS_VER (nur setzen, wenn du genau weißt, was du tust)."
+          Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
